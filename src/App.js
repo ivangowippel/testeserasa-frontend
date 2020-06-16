@@ -3,12 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  function nome() {
+    console.log('AAAAAAAAAAA');
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Teste
         </p>
         <a
           className="App-link"
