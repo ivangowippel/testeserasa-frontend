@@ -10,7 +10,6 @@ class App extends Component {
       empresaSelecionada: null,
       qtdNotas: null,
       qtdDebitos: null,
-      mensagemErro: null,
     };
   }
 
@@ -29,7 +28,8 @@ class App extends Component {
 
   async onClickImportar() {
     if (!this.state.qtdNotas || !this.state.qtdDebitos) {
-      this.setState({ mensagemErro: 'Informe um arquivo!' });
+      alert('Informe um arquivo!')
+      return;
     }
 
     this.setState({ qtdNotas: null, qtdDebitos: null });
@@ -56,7 +56,6 @@ class App extends Component {
 
   handleArquivoEscolhido(file) {
     if (file) {
-      this.setState({ mensagemErro: null });
       const fileReader = new FileReader();
       fileReader.onloadend = (e) => this.handleArquivoLido(e);
       fileReader.readAsText(file);
@@ -96,8 +95,6 @@ class App extends Component {
               this.setState({ qtdNotas: null, qtdDebitos: null });
             }}
           />
-          {this.state.mensagemErro &&
-            <h3> {this.state.mensagemErro} </h3>}
         </div>
 
         <div className='botaoImportar'>
