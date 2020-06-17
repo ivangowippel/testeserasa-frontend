@@ -11,7 +11,6 @@ class App extends Component {
       qtdNotas: null,
       qtdDebitos: null,
       mensagemErro: null,
-      mensagemSucessoImportacao: null,
     };
   }
 
@@ -42,7 +41,7 @@ class App extends Component {
           qtdNotas: this.state.qtdNotas,
           qtdDebitos: this.state.qtdDebitos,
         })
-      this.setState({ mensagemSucessoImportacao: 'Arquivo importado com sucesso' });
+      alert('Arquivo importado com sucesso!')
       await this.buscarRankingConfiabilidade();
     } catch (error) {
       console.log(error);
@@ -103,8 +102,6 @@ class App extends Component {
 
         <div className='botaoImportar'>
           <button onClick={() => this.onClickImportar()}>Importar</button>
-          {this.state.mensagemSucessoImportacao &&
-            <h3> {this.state.mensagemSucessoImportacao} </h3>}
         </div>
 
         <div>
