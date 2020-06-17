@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.botaoImportar {
+  margin: 10px;
+}
+
+td {
+  text-align: center; 
+}
