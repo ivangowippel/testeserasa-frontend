@@ -23,7 +23,7 @@ npm start
 
 * Selecionar a empresa
 
-* Selecionar o [arquivo](arquivo_importacao.txt), que encontra-se neste repositório.
+* Selecionar o [arquivo1](arquivo_importacao_empresa1.txt), [arquivo2](arquivo_importacao_empresa2.txt) ou [arquivo3](arquivo_importacao_empresa3.txt), que se encontram neste repositório.
 
 * Clicar no botão "importar"
 
